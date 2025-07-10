@@ -7,15 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Ernährungstracker</h1>
+  <div class="container">
+    <h1>Ernährungstracker</h1>
 
-  <form id="tracker-form">
-    <input type="text" id="item" placeholder="Lebensmittel" required />
-    <input type="number" id="calories" placeholder="Kalorien" required />
-    <button type="submit">Hinzufügen</button>
-  </form>
+    <form id="tracker-form" class="form-grid">
+      <input type="text" id="item" placeholder="Lebensmittel" required />
+      <input type="number" id="amount" placeholder="Menge (g)" required />
+      <input type="number" id="calories" placeholder="Kalorien" required />
+      <button type="submit">Hinzufügen</button>
+    </form>
 
-  <ul id="entry-list"></ul>
+    <table id="entry-table">
+      <thead>
+        <tr>
+          <th>Lebensmittel</th>
+          <th>Menge (g)</th>
+          <th>Kalorien</th>
+          <th>Zeit</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="entry-list"></tbody>
+    </table>
+
+    <p id="total">Gesamt: 0 kcal</p>
+    <button id="clear-entries" class="secondary">Alle Einträge löschen</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
